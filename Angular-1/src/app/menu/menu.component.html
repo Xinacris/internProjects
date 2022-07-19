@@ -1,0 +1,18 @@
+
+<div>
+    <button (click)="toggleData()" class="btn btn-secondary">PH1</button> 
+    <button (click)="toggleData2()" class="btn btn-secondary">PH2</button> 
+    <button (click)="toggleData3()" class="btn btn-secondary">PH3</button> 
+
+        <p></p>
+</div>
+<div *ngIf="toDisplay">
+    <app-content1 ></app-content1>
+</div>
+<div *ngIf="toDisplay2">
+    <app-content2></app-content2>
+</div>
+<div *ngIf="toDisplay3">
+    <app-content3></app-content3>
+</div>
+
