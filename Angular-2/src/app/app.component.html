@@ -1,0 +1,16 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<app-header></app-header>
+<app-menu (componentPicked)="selectedContent($event)">
+
+</app-menu>
+
+<app-content1 *ngIf="index==0"></app-content1>
+<app-content2 *ngIf="index==1"></app-content2>
+<app-content3 *ngIf="index==2"></app-content3>
+
+
+
+</body>
