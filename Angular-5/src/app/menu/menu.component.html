@@ -1,0 +1,13 @@
+
+<div>
+    <table >
+        <tr >            
+            <td *ngFor="let name of names; index as i">            
+                <button (click)='showComponent(i)' class="btn btn-secondary">{{name}}</button>
+            </td>        
+        </tr>
+    </table>
+</div>
+
+
+
