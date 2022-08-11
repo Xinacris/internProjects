@@ -1,0 +1,8 @@
+<app-menu (componentPicked)="selectedContent($event)"></app-menu>
+<app-contents [contentSelected]="index"></app-contents>
+<app-api></app-api>
+<button class="btn btn-secondary center" (click)="show($event)">Click me for popup</button>
+<div  class="place">
+  <app-popup *ngIf="popupShow" (popupHide)="receiveMessage($event)"></app-popup>
+  
+</div>

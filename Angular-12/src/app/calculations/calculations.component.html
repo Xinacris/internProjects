@@ -1,0 +1,48 @@
+<table style="color:white; float:left">
+  <th>ID</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Quantity</th>
+  <th>Total Price</th>
+  <tr *ngFor="let item of array">
+    <td>{{item.id}}</td>
+    <td>{{item.product_name}}</td>
+    <td>
+      <div class="form-group">
+        <input type="number" class="form-control" name="price" #p [defaultValue]="item.product_price"
+          [(ngModel)]="item.product_price">
+      </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="number" class="form-control" name="quantity" #q [defaultValue]="item.product_quantity"
+          [(ngModel)]="item.product_quantity">
+      </div>
+    </td>
+    <td>
+      <div class="form-group">
+        <input type="number" class="form-control" readonly [ngModel]="(+p.value * +q.value)" />
+      </div>
+    </td>
+    <td>
+      <button id="remove" (click)="delete(item.id)" class="btn btn-danger">Delete</button>
+    </td>
+  </tr>
+</table>
+<table style="float:left" class="col text-center">
+  <th style="color:white">Add New Item</th>
+  <tr>
+    <input class="form-control" type="text" name="product_name" placeholder="Name" #a>
+  </tr>
+  <tr>
+    <input type="number" class="form-control" name="product_price" #b placeholder="Price">
+  </tr>
+  <tr>
+    <input type="number" class="form-control" name="product_quantity" #c placeholder="Quantity">
+  </tr>
+  <tr style="align-items:center">
+    <div class="col text-center">
+    <button (click)="add(a.value,b.value,c.value)" class="btn btn-primary">Add</button>
+  </div>
+  </tr>
+</table>

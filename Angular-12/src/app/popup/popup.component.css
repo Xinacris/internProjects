@@ -1,0 +1,24 @@
+.popup {
+    color: white;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding:20%;
+}
+.closePopup{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.hidden{
+    /*display: none;*/
+    background-color: red;
+    
+}
