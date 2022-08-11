@@ -1,0 +1,34 @@
+.list {
+    display: block;
+    color: greenyellow;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    list-style-position: inside;
+    float: left;
+    justify-content: center;
+    width: 16.666%;
+    background-color: #212529;
+    font-family: 'Cormorant SC', serif;
+    font-size: x-large;
+
+}
+
+.ulList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: center;
+    list-style-position: inside;
+    text-align: center;
+    list-style-position: inside;
+
+}
+
+@media screen and (max-width: 1023px) {
+    .list {
+        width: 33.3333333%;
+        vertical-align: middle;
+    }
+}
